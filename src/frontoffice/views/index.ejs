@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/public/css/main.css">
+  <title><%= title %></title>
+</head>
+<body>
+  <h1>Blog Posts</h1>
+
+  <div class="rows">
+    <% posts.forEach(function(post) { %>
+      <div class="card">
+        <figure>
+          <img src="" alt="image - " class="profile">
+        </figure>
+        <h2><%= post.titulo %></h2>
+        <p><%= post.texto %></p>
+        <a href="/<%= post.id %>" class="btn-link">ver mais</a>
+      </div>
+      
+    <% }) %>
+
+  </div>
+</body>
+</html>
